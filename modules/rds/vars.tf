@@ -52,8 +52,8 @@ variable "private_subnet_ids" {
   default     = []
 }
 
-variable "cluster_sg_name" {
-  description = "Name of the EKS cluster Security Group"
+variable "db_subnet_group_name" {
+  description = "Name of the Database Security Group"
   type        = string
   default     = ""
 }

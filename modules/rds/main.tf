@@ -19,9 +19,9 @@ module "db" {
   vpc_security_group_ids = ["sg-12345678"]
 
   # DB subnet group
-  subnet_ids = "var.private_subnet_ids"
+  subnet_ids = var.private_subnet_ids
 
-  db_subnet_group_name = ""
+  db_subnet_group_name = var.db_subnet_group_name
 
   maintenance_window = "Mon:00:00-Mon:03:00"
   backup_window      = "03:00-06:00"
