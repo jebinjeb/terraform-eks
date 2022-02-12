@@ -32,10 +32,7 @@ module "db" {
   monitoring_role_name = var.monitoring_role_name
   create_monitoring_role = true
 
-  tags = {
-    Owner       = "user"
-    Environment = "dev"
-  }
+  tags = "${var.tags}"
 
   # DB parameter group
   family = "mysql5.7"

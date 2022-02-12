@@ -68,3 +68,10 @@ variable "subnet_names" {
   default = []
 }
 
+variable tags {
+  type = "map"
+
+  default = {
+    "Environment" = "Development"
+  }
+}
