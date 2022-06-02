@@ -6,16 +6,6 @@ module "vpc" {
   eks_cluster_name = var.cluster_name
 }
 
-module "vpc_peering" {
-  source      = "../../modules/vpc_peering"
-  region      = var.rds_region
-  vpc_id      = module.vpc.vpc_id
-  natgw_ids   = module.vpc.natgw_ids
-  peer_vpc_id = var.rds_vpc_id
-  rds_subnet  = var.rds_subnet
-  name        = var.vpc_peer_name
-}
-
 resource "aws_kms_key" "eks" {
   description = "EKS Secret Encryption Key"
 }
